@@ -35,6 +35,7 @@ int main (int argc, char *argv[])
 
     /* Question 1: Are changes made to the local or global variables by the
        child process reflected in the parent process? Explain. */
+    //
     printf("After fork, global = %d, local = %d\n", global, local);
   }
        

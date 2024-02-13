@@ -10,7 +10,7 @@
 
 // Question 1: How many processes are created? Explain.
 // Answer: 7 processes were made. The reason this happens is because of interweaving, as fork-1, fork-2, and fork-3 come from the same process, and as more children are made
-// then those children will share the same process.
+// then those children will share the same process. A child of a child. 
 
 int main(int argc, char *argv[])
 {

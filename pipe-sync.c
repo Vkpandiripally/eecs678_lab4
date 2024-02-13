@@ -30,21 +30,21 @@ int main()
   ret = fork();
   if (ret == 0) {
 
-    close(p1[1]);
-    close(p2[0]);
-
     /* child process. */
     printf("Child line 1\n");
+    // read(p2[0], buf, sizeof(buf));
+    // close(p2[1]);
     printf("Child line 2\n");
   } else {
 
-    close(p1[0]);
-    close(p2[1]);
 
     /* parent process */
     printf("Parent line 1\n");
+    read(p1[0], buf, sizeof(buf));
+    close(p1[1]);
     printf("Parent line 2\n");
 
     wait(&stat);
+    //use read and close
   }
 }
